@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | RexRyze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        .nav-link { transition: all 0.2s ease; }
+        .nav-link:hover { color: #0ea5e9; }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl tracking-tighter">RR</span>
+                    </div>
+                    <a href="index.html" class="font-semibold text-2xl tracking-tighter text-slate-900">RexRyze</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-slate-700 hover:text-slate-900">Home</a>
+                    <a href="diensten.html" class="nav-link text-slate-700 hover:text-slate-900">Diensten</a>
+                    <a href="portfolio.html" class="nav-link text-slate-700 hover:text-slate-900">Portfolio</a>
+                    <a href="prijzen.html" class="nav-link text-slate-700 hover:text-slate-900">Prijzen</a>
+                    <a href="contact.html" class="nav-link text-slate-900 font-semibold">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <a href="contact.html" class="px-5 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-2xl transition-colors">
+                        Gratis consult aanvragen
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-700 hover:text-slate-900">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 flex flex-col gap-y-1 text-sm font-medium">
+                <a href="index.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Home</a>
+                <a href="diensten.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Diensten</a>
+                <a href="portfolio.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Portfolio</a>
+                <a href="prijzen.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Prijzen</a>
+                <a href="contact.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700 font-semibold">Contact</a>
+                <div class="pt-3 border-t mt-2">
+                    <a href="contact.html" class="block w-full text-center py-3 bg-slate-900 text-white font-semibold rounded-2xl">
+                        Gratis consult aanvragen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">Laten we kennismaken</h1>
+                <p class="mt-3 text-xl text-slate-600">Vul het formulier in of neem direct contact op. Ik reageer altijd binnen 24 uur en maak gratis een voorbeeld voor je.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid lg:grid-cols-12 gap-10">
+            
+            <!-- Form -->
+            <div class="lg:col-span-7 bg-white rounded-3xl border border-slate-200 p-8 md:p-10">
+                <h2 class="font-semibold text-2xl tracking-tight mb-6">Vraag een gratis consult of demo aan</h2>
+                
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Naam *</label>
+                            <input type="text" id="naam" required class="w-full border border-slate-300 focus:border-sky-400 rounded-2xl px-4 py-3 text-sm" placeholder="Jouw naam">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Bedrijfsnaam</label>
+                            <input type="text" id="bedrijf" class="w-full border border-slate-300 focus:border-sky-400 rounded-2xl px-4 py-3 text-sm" placeholder="Naam van je bedrijf">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">E-mailadres *</label>
+                            <input type="email" id="email" required class="w-full border border-slate-300 focus:border-sky-400 rounded-2xl px-4 py-3 text-sm" placeholder="jouw@email.nl">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Telefoonnummer</label>
+                            <input type="tel" id="telefoon" class="w-full border border-slate-300 focus:border-sky-400 rounded-2xl px-4 py-3 text-sm" placeholder="06 12 34 56 78">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Welk pakket interesseert je?</label>
+                        <select id="pakket" class="w-full border border-slate-300 focus:border-sky-400 rounded-2xl px-4 py-3 text-sm">
+                            <option value="">Nog niet zeker</option>
+                            <option value="Starter (€149)">Starter (€149)</option>
+                            <option value="Professional (€299)">Professional (€299)</option>
+                            <option value="Premium (€499)">Premium (€499)</option>
+                            <option value="Alleen onderhoud">Alleen maandelijks onderhoud</option>
+                            <option value="Anders">Anders / maatwerk</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Bericht / Wat wil je laten bouwen? *</label>
+                        <textarea id="bericht" required rows="5" class="w-full border border-slate-300 focus:border-sky-400 rounded-3xl px-4 py-3 text-sm" placeholder="Beschrijf kort je bedrijf en wat je zoekt (bijv. website met online reservering voor mijn restaurant)"></textarea>
+                    </div>
+
+                    <button type="submit" 
+                            class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 transition-colors text-white font-semibold rounded-3xl text-lg flex items-center justify-center gap-x-2">
+                        <span>Verstuur aanvraag</span>
+                    </button>
+                    
+                    <p class="text-center text-xs text-slate-500">Je gegevens worden alleen gebruikt om contact met je op te nemen.</p>
+                </form>
+            </div>
+
+            <!-- Contact info -->
+            <div class="lg:col-span-5">
+                <div class="bg-white rounded-3xl border border-slate-200 p-8 h-full">
+                    <h3 class="font-semibold tracking-tight text-xl mb-6">Direct contact</h3>
+                    
+                    <div class="space-y-6 text-sm">
+                        <div class="flex gap-x-4">
+                            <div class="w-9 h-9 bg-slate-100 text-slate-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="text-slate-500 text-xs">E-mail</div>
+                                <a href="mailto:info@rexryze.com" class="font-medium hover:text-sky-600">info@rexryze.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-x-4">
+                            <div class="w-9 h-9 bg-slate-100 text-slate-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="text-slate-500 text-xs">Telefoon / WhatsApp</div>
+                                <a href="tel:+31612345678" class="font-medium hover:text-sky-600">+31 6 12 34 56 78</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-x-4">
+                            <div class="w-9 h-9 bg-slate-100 text-slate-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <div class="text-slate-500 text-xs">Locatie</div>
+                                <div class="font-medium">Nederland (landelijk)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t">
+                        <div class="text-xs uppercase tracking-widest font-semibold text-slate-400 mb-3">KVK &amp; BTW</div>
+                        <div class="text-sm text-slate-600 space-y-1">
+                            <div><strong>KVK-nummer:</strong> [In behandeling – definitief per 1 juli 2026]</div>
+                            <div><strong>BTW-nummer:</strong> [Wordt toegevoegd na registratie]</div>
+                        </div>
+                        <p class="mt-4 text-xs text-slate-500">Ik sta geregistreerd bij de Kamer van Koophandel. Facturen worden met KVK-nummer verstuurd.</p>
+                    </div>
+
+                    <div class="mt-6 text-xs text-emerald-600 flex items-center gap-x-2">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="font-medium">Reactie binnen 24 uur gegarandeerd</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-y-6">
+                <div>
+                    <div class="flex items-center gap-x-3 mb-1">
+                        <div class="w-8 h-8 bg-slate-900 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-lg tracking-tighter">RR</span>
+                        </div>
+                        <span class="font-semibold text-xl">RexRyze</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Professionele websites voor lokale bedrijven</p>
+                </div>
+
+                <div class="text-sm text-slate-500">
+                    <div class="flex flex-wrap gap-x-6 gap-y-1">
+                        <a href="contact.html" class="hover:text-slate-700">Contact</a>
+                        <a href="prijzen.html" class="hover:text-slate-700">Prijzen</a>
+                        <a href="portfolio.html" class="hover:text-slate-700">Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="text-xs text-slate-400">
+                    © 2026 RexRyze • Noah van Leunen<br>
+                    <span class="text-[10px]">KVK-nummer: [In behandeling – definitief per 1 juli 2026]</span><br>
+                    <span class="text-[10px]">BTW-nummer: [Wordt toegevoegd na registratie]</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-[100]">
+        <div class="bg-white rounded-3xl max-w-md mx-4 p-8 text-center">
+            <div class="mx-auto w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-5">
+                <i class="fas fa-check text-emerald-600 text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-2xl">Bedankt voor je bericht!</h3>
+            <p class="mt-2 text-slate-600">Ik neem binnen 24 uur contact met je op om een gratis consult of demo te plannen.</p>
+            
+            <button onclick="closeModal()" 
+                    class="mt-6 px-8 py-3 bg-slate-900 text-white font-semibold rounded-2xl w-full">
+                Terug naar home
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+        }
+
+        // Contact form
+        const form = document.getElementById('contact-form');
+        const modal = document.getElementById('success-modal');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate sending
+            const button = form.querySelector('button');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Versturen...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                form.reset();
+                button.innerHTML = originalText;
+                button.disabled = false;
+            }, 1200);
+        });
+        
+        function closeModal() {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

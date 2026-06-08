@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Gouden Lepel | Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+        
+        .restaurant-font { font-family: 'Playfair Display', Georgia, serif; }
+        
+        .nav-link { transition: color 0.2s ease; }
+        .nav-link:hover { color: #c2410f; }
+        
+        .menu-item {
+            transition: all 0.2s ease;
+        }
+        
+        .menu-item:hover {
+            transform: translateX(4px);
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.55)), url('https://picsum.photos/id/292/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-amber-50 font-sans text-slate-800">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-amber-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-amber-900 rounded-2xl flex items-center justify-center">
+                        <span class="text-white text-xl">🍽️</span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-2xl tracking-tight restaurant-font text-amber-900">De Gouden Lepel</span>
+                        <span class="block text-[10px] text-amber-600 -mt-1">Sinds 2018</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#menu" class="nav-link text-slate-700">Menu</a>
+                    <a href="#reserveren" class="nav-link text-slate-700">Reserveren</a>
+                    <a href="#over" class="nav-link text-slate-700">Over ons</a>
+                    <a href="#contact" class="nav-link text-slate-700">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <a href="#reserveren" 
+                       class="hidden md:block px-5 py-2 text-sm font-semibold bg-amber-900 text-white rounded-2xl hover:bg-amber-800 transition-colors">
+                        Reserveer nu
+                    </a>
+                    <button class="md:hidden text-amber-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg h-[580px] flex items-center text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-lg">
+                <div class="inline-block px-4 py-1 bg-white/20 backdrop-blur-md rounded-full text-sm mb-4">Hilversum</div>
+                <h1 class="text-6xl leading-none font-bold tracking-tighter restaurant-font mb-4">De Gouden Lepel</h1>
+                <p class="text-xl text-white/90 mb-8">Authentiek Nederlands koken met een moderne twist. Kom genieten in een warme, gastvrije sfeer.</p>
+                
+                <div class="flex flex-wrap gap-3">
+                    <a href="#reserveren" class="px-8 py-3.5 bg-white text-amber-900 font-semibold rounded-3xl hover:bg-amber-100 transition-colors">Reserveer een tafel</a>
+                    <a href="#menu" class="px-8 py-3.5 border border-white/60 hover:bg-white/10 font-medium rounded-3xl transition-colors">Bekijk het menu</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trust bar -->
+    <div class="bg-white border-b py-3">
+        <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-10 text-sm text-amber-700">
+            <div class="flex items-center gap-x-2"><i class="fas fa-star text-amber-500"></i> <span>4.8/5 (312 reviews)</span></div>
+            <div>⭐ Michelin aanbeveling 2024</div>
+            <div>🥂 Open 7 dagen per week</div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <section id="menu" class="max-w-6xl mx-auto px-6 py-14">
+        <div class="flex items-end justify-between mb-8">
+            <div>
+                <span class="text-amber-700 text-sm tracking-widest font-semibold">ONS MENU</span>
+                <h2 class="text-4xl font-bold tracking-tight">Seizoensgebonden gerechten</h2>
+            </div>
+            <a href="#" class="text-sm font-medium flex items-center gap-x-1 text-amber-800">Volledig menu als PDF <i class="fas fa-download ml-1"></i></a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+            <!-- Starters -->
+            <div>
+                <h3 class="font-semibold text-lg mb-4 text-amber-900 border-b pb-2">Voorgerechten</h3>
+                <div class="space-y-5">
+                    <div class="menu-item flex justify-between">
+                        <div>
+                            <div class="font-medium">Burrata met tomaat &amp; basilicum</div>
+                            <div class="text-sm text-amber-600">Met olijfolie en geroosterde pijnboompitten</div>
+                        </div>
+                        <div class="font-semibold whitespace-nowrap">€14,50</div>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <div>
+                            <div class="font-medium">Aspergesoep met eidooier</div>
+                            <div class="text-sm text-amber-600">Seizoensasperges uit de regio</div>
+                        </div>
+                        <div class="font-semibold whitespace-nowrap">€12,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-semibold text-lg mb-4 text-amber-900 border-b pb-2">Hoofdgerechten</h3>
+                <div class="space-y-5">
+                    <div class="menu-item flex justify-between">
+                        <div>
+                            <div class="font-medium">Gegrilde zeebaars</div>
+                            <div class="text-sm text-amber-600">Met venkel, citrus en olijven</div>
+                        </div>
+                        <div class="font-semibold whitespace-nowrap">€26,50</div>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <div>
+                            <div class="font-medium">Ribeye van de grill (250g)</div>
+                            <div class="text-sm text-amber-600">Met chimichurri en frietjes</div>
+                        </div>
+                        <div class="font-semibold whitespace-nowrap">€28,00</div>
+                    </div>
+                    <div class="menu-item flex justify-between">
+                        <div>
+                            <div class="font-medium">Pasta met truffel en paddenstoelen</div>
+                            <div class="text-sm text-amber-600">Vegetarisch</div>
+                        </div>
+                        <div class="font-semibold whitespace-nowrap">€19,50</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reserveren -->
+    <section id="reserveren" class="bg-white py-14 border-y">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-xl mx-auto text-center mb-8">
+                <h2 class="text-3xl font-bold tracking-tight">Reserveer jouw tafel</h2>
+                <p class="text-amber-700 mt-1">Wij houden graag een plekje voor je vrij</p>
+            </div>
+
+            <div class="max-w-lg mx-auto bg-amber-50 rounded-3xl p-8 border border-amber-100">
+                <form id="reserve-form" class="space-y-5">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-sm font-medium block mb-1">Datum</label>
+                            <input type="date" value="2026-06-20" class="w-full border border-amber-200 rounded-2xl px-4 py-2.5 text-sm">
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium block mb-1">Tijd</label>
+                            <select class="w-full border border-amber-200 rounded-2xl px-4 py-2.5 text-sm">
+                                <option>18:00</option>
+                                <option>18:30</option>
+                                <option selected>19:00</option>
+                                <option>19:30</option>
+                                <option>20:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-sm font-medium block mb-1">Aantal personen</label>
+                            <select class="w-full border border-amber-200 rounded-2xl px-4 py-2.5 text-sm">
+                                <option>2 personen</option>
+                                <option selected>3 personen</option>
+                                <option>4 personen</option>
+                                <option>5 personen</option>
+                                <option>6 personen</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium block mb-1">Naam</label>
+                            <input type="text" value="Johan de Vries" class="w-full border border-amber-200 rounded-2xl px-4 py-2.5 text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="text-sm font-medium block mb-1">E-mail of telefoon</label>
+                        <input type="text" value="johan.devries@email.nl" class="w-full border border-amber-200 rounded-2xl px-4 py-2.5 text-sm">
+                    </div>
+                    
+                    <button type="submit" class="w-full py-3.5 bg-amber-900 hover:bg-amber-800 transition-colors text-white font-semibold rounded-2xl">
+                        Bevestig reservering
+                    </button>
+                    <p class="text-center text-xs text-amber-600">Je ontvangt een bevestiging per e-mail</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Over ons -->
+    <section id="over" class="max-w-6xl mx-auto px-6 py-14">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h2 class="text-3xl font-bold tracking-tight mb-4">Een familiezaak met hart voor koken</h2>
+                <p class="text-slate-600">De Gouden Lepel is een warm restaurant in het hart van Hilversum. Al meer dan 6 jaar serveren wij verse, seizoensgebonden gerechten in een sfeervolle omgeving.</p>
+                <div class="mt-6 flex items-center gap-x-6 text-sm">
+                    <div>👨‍🍳 Chef Thomas Bakker</div>
+                    <div>📍 Kerkstraat 42, Hilversum</div>
+                </div>
+            </div>
+            <div class="text-sm bg-white p-7 rounded-3xl border">
+                <div class="font-semibold mb-2">Openingstijden</div>
+                <div class="space-y-1 text-slate-600">
+                    <div class="flex justify-between"><span>Maandag t/m donderdag</span> <span>17:30 – 22:00</span></div>
+                    <div class="flex justify-between"><span>Vrijdag &amp; zaterdag</span> <span>17:00 – 23:00</span></div>
+                    <div class="flex justify-between"><span>Zondag</span> <span>17:30 – 21:00</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-amber-900 text-white py-14">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-md">
+                <h2 class="text-3xl font-bold tracking-tight mb-3">Kom gezellig langs of neem contact op</h2>
+                <p class="text-amber-200">Kerkstraat 42, 1211 GK Hilversum</p>
+                
+                <div class="mt-6 space-y-2 text-sm">
+                    <a href="tel:+31351234567" class="block hover:underline">📞 035 123 4567</a>
+                    <a href="mailto:info@degoudenlepel.nl" class="block hover:underline">✉️ info@degoudenlepel.nl</a>
+                </div>
+                
+                <div class="mt-6 text-xs text-amber-300">Website gemaakt door <a href="https://rexryze.com" target="_blank" class="underline hover:text-white">RexRyze</a></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Fake reservation
+        document.getElementById('reserve-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.innerHTML = 'Reservering bevestigd! ✓';
+            btn.style.backgroundColor = '#166534';
+            
+            setTimeout(() => {
+                alert('Bedankt! Je reservering is bevestigd. Je ontvangt een e-mail met details.');
+                btn.innerHTML = 'Bevestig reservering';
+                btn.style.backgroundColor = '';
+                this.reset();
+            }, 1800);
+        });
+
+        // Tailwind script for any custom
+        document.documentElement.style.setProperty('--accent', '#c2410f');
+    </script>
+</body>
+</html>

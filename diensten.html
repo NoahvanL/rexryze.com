@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diensten | RexRyze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .nav-link {
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #0ea5e9;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl tracking-tighter">RR</span>
+                    </div>
+                    <a href="index.html" class="font-semibold text-2xl tracking-tighter text-slate-900">RexRyze</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-slate-700 hover:text-slate-900">Home</a>
+                    <a href="diensten.html" class="nav-link text-slate-900 font-semibold">Diensten</a>
+                    <a href="portfolio.html" class="nav-link text-slate-700 hover:text-slate-900">Portfolio</a>
+                    <a href="prijzen.html" class="nav-link text-slate-700 hover:text-slate-900">Prijzen</a>
+                    <a href="contact.html" class="nav-link text-slate-700 hover:text-slate-900">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <a href="contact.html" class="px-5 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-2xl transition-colors">
+                        Gratis consult aanvragen
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-700 hover:text-slate-900">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 flex flex-col gap-y-1 text-sm font-medium">
+                <a href="index.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Home</a>
+                <a href="diensten.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700 font-semibold">Diensten</a>
+                <a href="portfolio.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Portfolio</a>
+                <a href="prijzen.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Prijzen</a>
+                <a href="contact.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Contact</a>
+                <div class="pt-3 border-t mt-2">
+                    <a href="contact.html" class="block w-full text-center py-3 bg-slate-900 text-white font-semibold rounded-2xl">
+                        Gratis consult aanvragen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">Wat ik voor je kan betekenen</h1>
+                <p class="mt-4 text-xl text-slate-600">Van een simpele visitekaartwebsite tot een volledig maatwerk platform met boekings- of offertesysteem.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main services -->
+    <div class="max-w-7xl mx-auto px-6 py-14">
+        <div class="grid md:grid-cols-2 gap-6">
+            
+            <!-- Service 1 -->
+            <div class="service-card bg-white rounded-3xl p-8 border border-slate-200">
+                <div class="flex items-start gap-5">
+                    <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-laptop-code text-3xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-2xl tracking-tight">Website ontwikkeling</h3>
+                        <p class="mt-3 text-slate-600">Een volledig op maat gemaakte, moderne website die perfect past bij jouw bedrijf. Mobielvriendelijk, snel en SEO-vriendelijk.</p>
+                        <ul class="mt-5 space-y-2 text-sm">
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Professioneel design</li>
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Mobielvriendelijk (responsive)</li>
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Contactformulier &amp; Google Maps</li>
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Basis SEO optimalisatie</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card bg-white rounded-3xl p-8 border border-slate-200">
+                <div class="flex items-start gap-5">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-tools text-3xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-2xl tracking-tight">Onderhoud &amp; updates</h3>
+                        <p class="mt-3 text-slate-600">Ik zorg dat je website altijd up-to-date, veilig en snel blijft. Maandelijks onderhoud zodat jij je kunt focussen op je bedrijf.</p>
+                        <ul class="mt-5 space-y-2 text-sm">
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Regelmatige updates</li>
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Back-ups &amp; beveiliging</li>
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Kleine aanpassingen inbegrepen</li>
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Prioriteit support</li>
+                        </ul>
+                        <div class="mt-4 text-xs px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full inline-block">Vanaf €12 per maand</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card bg-white rounded-3xl p-8 border border-slate-200">
+                <div class="flex items-start gap-5">
+                    <div class="w-14 h-14 bg-violet-100 text-violet-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-search text-3xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-2xl tracking-tight">SEO &amp; vindbaarheid</h3>
+                        <p class="mt-3 text-slate-600">Basis zoekmachine optimalisatie zodat je beter gevonden wordt op Google. Inclusief Google Business Profile integratie.</p>
+                        <ul class="mt-5 space-y-2 text-sm">
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Technische SEO</li>
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Google Maps &amp; Local SEO</li>
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Snelheidsoptimalisatie</li>
+                            <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 w-4"></i> Meta tags &amp; structuur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card bg-white rounded-3xl p-8 border border-slate-200">
+                <div class="flex items-start gap-5">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-calendar-check text-3xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-2xl tracking-tight">Extra functionaliteiten</h3>
+                        <p class="mt-3 text-slate-600">Boekingssystemen, offerte aanvragen, online menu's, portfolio's, contactformulieren en meer. Alles op maat.</p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="text-xs bg-slate-100 px-3 py-1 rounded-full">Boekingssysteem</span>
+                            <span class="text-xs bg-slate-100 px-3 py-1 rounded-full">Offerteformulier</span>
+                            <span class="text-xs bg-slate-100 px-3 py-1 rounded-full">Foto galerij</span>
+                            <span class="text-xs bg-slate-100 px-3 py-1 rounded-full">Online menu</span>
+                            <span class="text-xs bg-slate-100 px-3 py-1 rounded-full">Google Reviews integratie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recurring revenue highlight -->
+    <div class="max-w-7xl mx-auto px-6 pb-16">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-10 text-white">
+            <div class="max-w-3xl">
+                <div class="uppercase tracking-[2px] text-xs font-medium text-emerald-400 mb-3">TERUGKERENDE INKOMSTEN</div>
+                <h3 class="text-3xl font-semibold tracking-tight mb-3">Bouw één keer, verdien maandelijks</h3>
+                <p class="text-slate-300 text-lg">Veel ondernemers kiezen voor een onderhoudspakket. Zo blijft je website altijd up-to-date en verdien jij stabiele maandelijkse inkomsten.</p>
+                
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-white/10 rounded-2xl p-5">
+                        <div class="font-semibold text-emerald-400">Website bouwen</div>
+                        <div class="text-3xl font-semibold mt-1">€149 - €499</div>
+                        <div class="text-xs text-slate-400">eenmalig</div>
+                    </div>
+                    <div class="bg-white/10 rounded-2xl p-5">
+                        <div class="font-semibold text-emerald-400">Maandelijks onderhoud</div>
+                        <div class="text-3xl font-semibold mt-1">€12 - €25</div>
+                        <div class="text-xs text-slate-400">per maand</div>
+                    </div>
+                    <div class="bg-white/10 rounded-2xl p-5">
+                        <div class="font-semibold text-emerald-400">Hosting &amp; domein</div>
+                        <div class="text-3xl font-semibold mt-1">€5 - €12</div>
+                        <div class="text-xs text-slate-400">per maand</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Process -->
+    <div class="max-w-7xl mx-auto px-6 pb-20">
+        <h2 class="text-center text-3xl font-semibold tracking-tight mb-10">Hoe het werkt</h2>
+        <div class="grid md:grid-cols-5 gap-4">
+            <div class="bg-white rounded-3xl p-6 border border-slate-100 text-center">
+                <div class="mx-auto w-9 h-9 flex items-center justify-center bg-sky-100 text-sky-600 rounded-2xl mb-4 text-sm font-bold">1</div>
+                <div class="font-semibold mb-1">Kennismaking</div>
+                <div class="text-xs text-slate-500">Gratis consult (15 min)</div>
+            </div>
+            <div class="bg-white rounded-3xl p-6 border border-slate-100 text-center">
+                <div class="mx-auto w-9 h-9 flex items-center justify-center bg-sky-100 text-sky-600 rounded-2xl mb-4 text-sm font-bold">2</div>
+                <div class="font-semibold mb-1">Offerte &amp; akkoord</div>
+                <div class="text-xs text-slate-500">50% aanbetaling</div>
+            </div>
+            <div class="bg-white rounded-3xl p-6 border border-slate-100 text-center">
+                <div class="mx-auto w-9 h-9 flex items-center justify-center bg-sky-100 text-sky-600 rounded-2xl mb-4 text-sm font-bold">3</div>
+                <div class="font-semibold mb-1">Design &amp; bouw</div>
+                <div class="text-xs text-slate-500">3-10 werkdagen</div>
+            </div>
+            <div class="bg-white rounded-3xl p-6 border border-slate-100 text-center">
+                <div class="mx-auto w-9 h-9 flex items-center justify-center bg-sky-100 text-sky-600 rounded-2xl mb-4 text-sm font-bold">4</div>
+                <div class="font-semibold mb-1">Feedback &amp; aanpassingen</div>
+                <div class="text-xs text-slate-500">Tot tevredenheid</div>
+            </div>
+            <div class="bg-white rounded-3xl p-6 border border-slate-100 text-center">
+                <div class="mx-auto w-9 h-9 flex items-center justify-center bg-sky-100 text-sky-600 rounded-2xl mb-4 text-sm font-bold">5</div>
+                <div class="font-semibold mb-1">Oplevering &amp; betaling</div>
+                <div class="text-xs text-slate-500">50% restant + live</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-y-6">
+                <div>
+                    <div class="flex items-center gap-x-3 mb-1">
+                        <div class="w-8 h-8 bg-slate-900 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-lg tracking-tighter">RR</span>
+                        </div>
+                        <span class="font-semibold text-xl">RexRyze</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Professionele websites voor lokale bedrijven</p>
+                </div>
+
+                <div class="text-sm text-slate-500">
+                    <div class="flex flex-wrap gap-x-6 gap-y-1">
+                        <a href="contact.html" class="hover:text-slate-700">Contact</a>
+                        <a href="prijzen.html" class="hover:text-slate-700">Prijzen</a>
+                        <a href="portfolio.html" class="hover:text-slate-700">Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="text-xs text-slate-400">
+                    © 2026 RexRyze • Noah van Leunen<br>
+                    <span class="text-[10px]">KVK-nummer: [In behandeling – definitief per 1 juli 2026]</span><br>
+                    <span class="text-[10px]">BTW-nummer: [Wordt toegevoegd na registratie]</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

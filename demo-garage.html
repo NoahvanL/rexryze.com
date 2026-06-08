@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Dijk Auto Service | Autogarage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .nav-link { transition: color 0.2s ease; }
+        .nav-link:hover { color: #1e40af; }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.65)), url('https://picsum.photos/id/160/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+    <!-- Navbar -->
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-blue-800 rounded-2xl flex items-center justify-center text-white">
+                        <i class="fas fa-car text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-2xl tracking-tight">Van Dijk Auto Service</span>
+                        <span class="block text-[10px] text-blue-700 -mt-1">Sinds 2009</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#diensten" class="nav-link text-slate-700">Diensten</a>
+                    <a href="#afspraak" class="nav-link text-slate-700">Afspraak maken</a>
+                    <a href="#reviews" class="nav-link text-slate-700">Reviews</a>
+                    <a href="#contact" class="nav-link text-slate-700">Contact</a>
+                </div>
+
+                <a href="#afspraak" class="px-5 py-2 text-sm font-semibold bg-blue-800 text-white rounded-2xl hover:bg-blue-700 transition-colors">
+                    Maak afspraak
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg h-[520px] flex items-center text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-xl">
+                <div class="inline px-4 py-1 bg-blue-700 text-white text-xs tracking-widest font-medium rounded-full mb-4">APELDOORN</div>
+                <h1 class="text-6xl font-bold tracking-tighter mb-4">Betrouwbare auto service,<br>elke dag.</h1>
+                <p class="text-xl text-blue-100 mb-8">Professioneel onderhoud, reparaties en APK voor alle merken. Snel en eerlijk.</p>
+                
+                <div class="flex gap-3">
+                    <a href="#afspraak" class="px-8 py-3 bg-white text-blue-900 font-semibold rounded-3xl hover:bg-blue-50 transition-colors">Maak direct afspraak</a>
+                    <a href="#diensten" class="px-8 py-3 border border-white/60 hover:bg-white/10 font-medium rounded-3xl transition-colors">Bekijk diensten</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trust -->
+    <div class="max-w-6xl mx-auto px-6 -mt-6 relative z-10">
+        <div class="bg-white shadow rounded-3xl p-5 flex flex-wrap items-center justify-between text-sm gap-y-3">
+            <div class="flex items-center gap-x-3 px-4">
+                <i class="fas fa-shield-alt text-blue-600"></i>
+                <span class="font-medium">APK erkend</span>
+            </div>
+            <div class="text-slate-600">✓ 98% klanttevredenheid</div>
+            <div class="text-slate-600">✓ 24/7 pechhulp</div>
+            <div class="text-blue-600 font-medium">Gratis diagnose bij afspraak</div>
+        </div>
+    </div>
+
+    <!-- Diensten -->
+    <section id="diensten" class="max-w-6xl mx-auto px-6 py-14">
+        <h2 class="text-3xl font-bold tracking-tight mb-8">Onze diensten</h2>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white border border-slate-200 p-6 rounded-3xl">
+                <div class="text-blue-600 mb-3"><i class="fas fa-tools text-2xl"></i></div>
+                <h3 class="font-semibold text-xl">Onderhoud &amp; APK</h3>
+                <p class="mt-2 text-sm text-slate-600">Regelmatig onderhoud, olie verversen, APK-keuring en meer. Altijd volgens fabrieksvoorschriften.</p>
+                <div class="mt-4 text-xs bg-blue-50 text-blue-700 inline px-3 py-1 rounded-full">Vanaf €89</div>
+            </div>
+            <div class="bg-white border border-slate-200 p-6 rounded-3xl">
+                <div class="text-blue-600 mb-3"><i class="fas fa-wrench text-2xl"></i></div>
+                <h3 class="font-semibold text-xl">Reparaties</h3>
+                <p class="mt-2 text-sm text-slate-600">Remmen, koppeling, uitlaat, airco en elektronica. Transparante prijzen en snelle service.</p>
+                <div class="mt-4 text-xs bg-blue-50 text-blue-700 inline px-3 py-1 rounded-full">Offerte binnen 1 uur</div>
+            </div>
+            <div class="bg-white border border-slate-200 p-6 rounded-3xl">
+                <div class="text-blue-600 mb-3"><i class="fas fa-car-crash text-2xl"></i></div>
+                <h3 class="font-semibold text-xl">Pechhulp &amp; Schade</h3>
+                <p class="mt-2 text-sm text-slate-600">24/7 pechhulp, banden wisselen en schadeherstel. Wij regelen ook de verzekering.</p>
+                <div class="mt-4 text-xs bg-blue-50 text-blue-700 inline px-3 py-1 rounded-full">24/7 bereikbaar</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Afspraak maken -->
+    <section id="afspraak" class="bg-white py-14 border-y">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-lg">
+                <h2 class="text-3xl font-bold tracking-tight mb-2">Maak een afspraak</h2>
+                <p class="text-slate-600 mb-6">Kies een datum en tijd. Je ontvangt direct een bevestiging.</p>
+                
+                <form id="afspraak-form" class="space-y-5 bg-slate-50 p-8 rounded-3xl border">
+                    <div>
+                        <label class="text-sm font-medium">Type afspraak</label>
+                        <select class="mt-1 w-full border rounded-2xl px-4 py-3 text-sm">
+                            <option>APK + onderhoud</option>
+                            <option>Algemeen onderhoud</option>
+                            <option>Remmen controleren</option>
+                            <option>Airco bijvullen</option>
+                            <option>Bandenspanning / wisselen</option>
+                            <option>Overige reparatie</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-sm font-medium">Datum</label>
+                            <input type="date" value="2026-06-18" class="mt-1 w-full border rounded-2xl px-4 py-3 text-sm">
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium">Tijd</label>
+                            <select class="mt-1 w-full border rounded-2xl px-4 py-3 text-sm">
+                                <option>08:30</option>
+                                <option>09:30</option>
+                                <option selected>10:30</option>
+                                <option>13:00</option>
+                                <option>14:30</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="text-sm font-medium">Kenteken</label>
+                        <input type="text" value="AB-123-C" class="mt-1 w-full border rounded-2xl px-4 py-3 text-sm" placeholder="AB-123-C">
+                    </div>
+                    
+                    <div>
+                        <label class="text-sm font-medium">Naam &amp; telefoon</label>
+                        <input type="text" value="Mark Jansen • 06 1234 5678" class="mt-1 w-full border rounded-2xl px-4 py-3 text-sm">
+                    </div>
+                    
+                    <button type="submit" class="w-full py-3 bg-blue-800 hover:bg-blue-700 text-white font-semibold rounded-2xl transition-colors">
+                        Afspraak bevestigen
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="max-w-6xl mx-auto px-6 py-14">
+        <h2 class="text-3xl font-bold tracking-tight mb-8">Wat onze klanten zeggen</h2>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-3xl border">
+                <div class="flex text-amber-400 mb-3">★★★★★</div>
+                <p class="text-sm">"Snel en eerlijk. Mijn auto was binnen 2 uur klaar. Zeer tevreden!"</p>
+                <div class="mt-4 text-xs font-medium">— Peter K. • Apeldoorn</div>
+            </div>
+            <div class="bg-white p-6 rounded-3xl border">
+                <div class="flex text-amber-400 mb-3">★★★★★</div>
+                <p class="text-sm">"Goede prijs, duidelijke uitleg en de auto rijdt weer als nieuw. Top service."</p>
+                <div class="mt-4 text-xs font-medium">— Sandra M. • Deventer</div>
+            </div>
+            <div class="bg-white p-6 rounded-3xl border">
+                <div class="flex text-amber-400 mb-3">★★★★☆</div>
+                <p class="text-sm">"Ze regelden alles met mijn verzekering na een aanrijding. Echt top."</p>
+                <div class="mt-4 text-xs font-medium">— Erik V. • Apeldoorn</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-blue-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center gap-y-6 justify-between">
+                <div>
+                    <h3 class="font-semibold text-2xl">Van Dijk Auto Service</h3>
+                    <div class="text-blue-200 mt-1">Industrieweg 18 • 7321 AP Apeldoorn</div>
+                </div>
+                <div class="flex flex-col md:items-end text-sm space-y-1">
+                    <a href="tel:+31555432109" class="hover:underline">📞 055 543 2109</a>
+                    <a href="mailto:info@vandijkautoservice.nl" class="hover:underline">✉️ info@vandijkautoservice.nl</a>
+                    <div class="text-blue-300 text-xs mt-2">Website gemaakt door <a href="https://rexryze.com" target="_blank" class="underline">RexRyze</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('afspraak-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.innerHTML = 'Afspraak bevestigd! ✓';
+            btn.style.backgroundColor = '#1e40af';
+            
+            setTimeout(() => {
+                alert('Bedankt! Je afspraak is bevestigd. We zien je op de gekozen datum.');
+                btn.innerHTML = 'Afspraak bevestigen';
+                btn.style.backgroundColor = '';
+                this.reset();
+            }, 1600);
+        });
+    </script>
+</body>
+</html>

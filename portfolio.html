@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | RexRyze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        .nav-link { transition: all 0.2s ease; }
+        .nav-link:hover { color: #0ea5e9; }
+        
+        .demo-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .demo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl tracking-tighter">RR</span>
+                    </div>
+                    <a href="index.html" class="font-semibold text-2xl tracking-tighter text-slate-900">RexRyze</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-slate-700 hover:text-slate-900">Home</a>
+                    <a href="diensten.html" class="nav-link text-slate-700 hover:text-slate-900">Diensten</a>
+                    <a href="portfolio.html" class="nav-link text-slate-900 font-semibold">Portfolio</a>
+                    <a href="prijzen.html" class="nav-link text-slate-700 hover:text-slate-900">Prijzen</a>
+                    <a href="contact.html" class="nav-link text-slate-700 hover:text-slate-900">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <a href="contact.html" class="px-5 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-2xl transition-colors">
+                        Gratis consult aanvragen
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-700 hover:text-slate-900">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 flex flex-col gap-y-1 text-sm font-medium">
+                <a href="index.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Home</a>
+                <a href="diensten.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Diensten</a>
+                <a href="portfolio.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700 font-semibold">Portfolio</a>
+                <a href="prijzen.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Prijzen</a>
+                <a href="contact.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Contact</a>
+                <div class="pt-3 border-t mt-2">
+                    <a href="contact.html" class="block w-full text-center py-3 bg-slate-900 text-white font-semibold rounded-2xl">
+                        Gratis consult aanvragen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">Portfolio</h1>
+                <p class="mt-4 text-xl text-slate-600">Dit zijn realistische demo-websites die ik heb gebouwd om te laten zien wat mogelijk is. Elk project is volledig functioneel en mobielvriendelijk.</p>
+                <div class="mt-4 inline-flex items-center gap-x-2 text-sm text-emerald-600 bg-emerald-50 px-4 py-1.5 rounded-3xl">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Klik op "Bekijk live demo" om de volledige website te zien</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Restaurant -->
+            <div class="demo-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/292/800/420" alt="Restaurant De Gouden Lepel" class="w-full h-64 object-cover">
+                    <div class="absolute top-4 right-4 bg-white px-3 py-1 text-xs font-medium rounded-full shadow flex items-center gap-x-1">
+                        <i class="fas fa-utensils text-amber-500"></i>
+                        <span class="font-semibold text-slate-700">Restaurant</span>
+                    </div>
+                </div>
+                <div class="p-7">
+                    <h3 class="font-semibold text-2xl tracking-tight">De Gouden Lepel</h3>
+                    <p class="text-slate-500 mt-1">Restaurant • Hilversum</p>
+                    
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-amber-100 text-amber-700 px-3 py-1 rounded-full">Online reserveren</span>
+                        <span class="text-xs bg-amber-100 text-amber-700 px-3 py-1 rounded-full">Menu</span>
+                        <span class="text-xs bg-amber-100 text-amber-700 px-3 py-1 rounded-full">Google Maps</span>
+                    </div>
+                    
+                    <p class="mt-4 text-sm text-slate-600">Een elegante en uitnodigende website met een volledig werkend reserveringssysteem, actueel menu en contactopties. Perfect voor horeca.</p>
+                    
+                    <div class="mt-6">
+                        <a href="demo-restaurant.html" target="_blank" 
+                           class="inline-flex items-center gap-x-2 px-5 py-2.5 bg-amber-600 hover:bg-amber-700 transition-colors text-white font-medium text-sm rounded-2xl">
+                            Bekijk live demo <i class="fas fa-external-link-alt text-xs ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Garage -->
+            <div class="demo-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/160/800/420" alt="Van Dijk Auto Service" class="w-full h-64 object-cover">
+                    <div class="absolute top-4 right-4 bg-white px-3 py-1 text-xs font-medium rounded-full shadow flex items-center gap-x-1">
+                        <i class="fas fa-car text-blue-500"></i>
+                        <span class="font-semibold text-slate-700">Autogarage</span>
+                    </div>
+                </div>
+                <div class="p-7">
+                    <h3 class="font-semibold text-2xl tracking-tight">Van Dijk Auto Service</h3>
+                    <p class="text-slate-500 mt-1">Autogarage • Apeldoorn</p>
+                    
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Afspraak maken</span>
+                        <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Diensten</span>
+                        <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Reviews</span>
+                    </div>
+                    
+                    <p class="mt-4 text-sm text-slate-600">Professionele website voor een autogarage met online afspraakplanner, overzicht van diensten, prijzen en een contactformulier voor spoedklussen.</p>
+                    
+                    <div class="mt-6">
+                        <a href="demo-garage.html" target="_blank" 
+                           class="inline-flex items-center gap-x-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 transition-colors text-white font-medium text-sm rounded-2xl">
+                            Bekijk live demo <i class="fas fa-external-link-alt text-xs ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kapper -->
+            <div class="demo-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/1005/800/420" alt="Studio Snip" class="w-full h-64 object-cover">
+                    <div class="absolute top-4 right-4 bg-white px-3 py-1 text-xs font-medium rounded-full shadow flex items-center gap-x-1">
+                        <i class="fas fa-cut text-purple-500"></i>
+                        <span class="font-semibold text-slate-700">Kapperszaak</span>
+                    </div>
+                </div>
+                <div class="p-7">
+                    <h3 class="font-semibold text-2xl tracking-tight">Studio Snip</h3>
+                    <p class="text-slate-500 mt-1">Kapperszaak • Utrecht</p>
+                    
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Online boeken</span>
+                        <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Diensten &amp; prijzen</span>
+                        <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Portfolio</span>
+                    </div>
+                    
+                    <p class="mt-4 text-sm text-slate-600">Stijlvolle website voor een moderne kapsalon met online boekingskalender, dienstenoverzicht, prijslijst en een fotogalerij van resultaten.</p>
+                    
+                    <div class="mt-6">
+                        <a href="demo-kapper.html" target="_blank" 
+                           class="inline-flex items-center gap-x-2 px-5 py-2.5 bg-purple-600 hover:bg-purple-700 transition-colors text-white font-medium text-sm rounded-2xl">
+                            Bekijk live demo <i class="fas fa-external-link-alt text-xs ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loodgieter -->
+            <div class="demo-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/251/800/420" alt="Pro Loodgieter" class="w-full h-64 object-cover">
+                    <div class="absolute top-4 right-4 bg-white px-3 py-1 text-xs font-medium rounded-full shadow flex items-center gap-x-1">
+                        <i class="fas fa-wrench text-emerald-500"></i>
+                        <span class="font-semibold text-slate-700">Loodgietersbedrijf</span>
+                    </div>
+                </div>
+                <div class="p-7">
+                    <h3 class="font-semibold text-2xl tracking-tight">Pro Loodgieter</h3>
+                    <p class="text-slate-500 mt-1">Loodgietersbedrijf • Zwolle</p>
+                    
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">24/7 spoed</span>
+                        <span class="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Offerte aanvragen</span>
+                        <span class="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Diensten</span>
+                    </div>
+                    
+                    <p class="mt-4 text-sm text-slate-600">Betrouwbare website voor een loodgietersbedrijf met spoedknop, offerteformulier, dienstenoverzicht en duidelijke contactinformatie voor lokale klanten.</p>
+                    
+                    <div class="mt-6">
+                        <a href="demo-loodgieter.html" target="_blank" 
+                           class="inline-flex items-center gap-x-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 transition-colors text-white font-medium text-sm rounded-2xl">
+                            Bekijk live demo <i class="fas fa-external-link-alt text-xs ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Extra info -->
+    <div class="max-w-7xl mx-auto px-6 pb-16">
+        <div class="bg-white border border-slate-200 rounded-3xl p-8 md:p-10">
+            <div class="flex flex-col md:flex-row md:items-center gap-8">
+                <div class="flex-1">
+                    <h3 class="font-semibold text-2xl tracking-tight">Wil je een vergelijkbare website voor jouw bedrijf?</h3>
+                    <p class="mt-2 text-slate-600">Ik kan een gratis voorbeeld maken op basis van jouw bedrijf. Zo zie je precies wat je krijgt voordat je betaalt.</p>
+                </div>
+                <div>
+                    <a href="contact.html" class="inline-flex items-center justify-center gap-x-2 whitespace-nowrap px-8 py-3.5 bg-slate-900 text-white font-semibold rounded-3xl hover:bg-slate-800 transition-colors">
+                        Vraag een gratis demo aan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-y-6">
+                <div>
+                    <div class="flex items-center gap-x-3 mb-1">
+                        <div class="w-8 h-8 bg-slate-900 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-lg tracking-tighter">RR</span>
+                        </div>
+                        <span class="font-semibold text-xl">RexRyze</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Professionele websites voor lokale bedrijven</p>
+                </div>
+
+                <div class="text-sm text-slate-500">
+                    <div class="flex flex-wrap gap-x-6 gap-y-1">
+                        <a href="contact.html" class="hover:text-slate-700">Contact</a>
+                        <a href="prijzen.html" class="hover:text-slate-700">Prijzen</a>
+                        <a href="portfolio.html" class="hover:text-slate-700">Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="text-xs text-slate-400">
+                    © 2026 RexRyze • Noah van Leunen<br>
+                    <span class="text-[10px]">KVK-nummer: [In behandeling – definitief per 1 juli 2026]</span><br>
+                    <span class="text-[10px]">BTW-nummer: [Wordt toegevoegd na registratie]</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

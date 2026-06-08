@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RexRyze | Professionele websites voor lokale bedrijven</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: #0f172a;
+        }
+        
+        .nav-link {
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #0ea5e9;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, #0ea5e9, transparent);
+        }
+        
+        .service-card, .pricing-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover, .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .demo-card {
+            transition: all 0.3s ease;
+        }
+        
+        .demo-card:hover {
+            transform: translateY(-6px);
+        }
+        
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .modern-shadow {
+            box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.1), 0 4px 6px -4px rgb(15 23 42 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl tracking-tighter">RR</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-2xl tracking-tighter text-slate-900">RexRyze</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-slate-700 hover:text-slate-900">Home</a>
+                    <a href="diensten.html" class="nav-link text-slate-700 hover:text-slate-900">Diensten</a>
+                    <a href="portfolio.html" class="nav-link text-slate-700 hover:text-slate-900">Portfolio</a>
+                    <a href="prijzen.html" class="nav-link text-slate-700 hover:text-slate-900">Prijzen</a>
+                    <a href="contact.html" class="nav-link text-slate-700 hover:text-slate-900">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <a href="contact.html" 
+                       class="px-5 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-2xl transition-colors">
+                        Gratis consult aanvragen
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-slate-700 hover:text-slate-900">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 flex flex-col gap-y-1 text-sm font-medium">
+                <a href="index.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Home</a>
+                <a href="diensten.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Diensten</a>
+                <a href="portfolio.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Portfolio</a>
+                <a href="prijzen.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Prijzen</a>
+                <a href="contact.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Contact</a>
+                <div class="pt-3 border-t mt-2">
+                    <a href="contact.html" 
+                       class="block w-full text-center py-3 bg-slate-900 text-white font-semibold rounded-2xl">
+                        Gratis consult aanvragen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg text-white">
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-20 md:pb-24">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-medium tracking-wide">Beschikbaar voor nieuwe projecten in 2026</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter leading-none mb-6">
+                    Professionele<br>websites die<br>meer klanten opleveren.
+                </h1>
+                
+                <p class="text-xl text-slate-300 max-w-lg mb-10">
+                    Ik help lokale bedrijven aan een moderne, snelle en mobielvriendelijke website 
+                    vanaf €149. Persoonlijk, betaalbaar en snel geleverd.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="prijzen.html" 
+                       class="inline-flex items-center justify-center gap-x-2 px-8 py-4 bg-white text-slate-900 font-semibold rounded-3xl hover:bg-slate-100 transition-all text-lg">
+                        Bekijk de prijzen
+                        <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                    <a href="portfolio.html" 
+                       class="inline-flex items-center justify-center gap-x-2 px-8 py-4 border border-white/30 hover:bg-white/10 font-semibold rounded-3xl transition-all text-lg">
+                        Bekijk voorbeelden
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex items-center gap-x-8 text-sm">
+                    <div class="flex -space-x-2">
+                        <div class="w-7 h-7 bg-white rounded-full border border-slate-700 overflow-hidden"><img src="https://picsum.photos/id/1005/28/28" class="w-full h-full object-cover"></div>
+                        <div class="w-7 h-7 bg-white rounded-full border border-slate-700 overflow-hidden"><img src="https://picsum.photos/id/1011/28/28" class="w-full h-full object-cover"></div>
+                        <div class="w-7 h-7 bg-white rounded-full border border-slate-700 overflow-hidden"><img src="https://picsum.photos/id/1009/28/28" class="w-full h-full object-cover"></div>
+                    </div>
+                    <div class="text-slate-300 text-sm">
+                        <span class="font-semibold text-white">12+ ondernemers</span> gingen je voor
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trust bar -->
+    <div class="border-b bg-white py-4">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-3 text-sm text-slate-500">
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-check text-emerald-500"></i>
+                    <span>Mobielvriendelijk</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-check text-emerald-500"></i>
+                    <span>Snelle laadtijd</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-check text-emerald-500"></i>
+                    <span>SEO basis inbegrepen</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-check text-emerald-500"></i>
+                    <span>1 jaar garantie</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-6">Hoi, ik ben Noah van Leunen.</h2>
+                <div class="prose prose-slate max-w-none text-lg text-slate-600">
+                    <p class="mb-4">Ik ben 16 jaar en oprichter van RexRyze. Met een grote passie voor webdesign help ik lokale ondernemers aan een professionele online aanwezigheid.</p>
+                    <p>Geen dure bureaus. Geen onduidelijke prijzen. Gewoon een mooie, snelle website die echt resultaat oplevert — tegen een eerlijke prijs.</p>
+                </div>
+                
+                <div class="mt-8 grid grid-cols-3 gap-4">
+                    <div>
+                        <div class="text-3xl font-semibold text-slate-900">16</div>
+                        <div class="text-sm text-slate-500">jaar ervaring met websites</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-semibold text-slate-900">100%</div>
+                        <div class="text-sm text-slate-500">klanttevredenheid</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-semibold text-slate-900">7</div>
+                        <div class="text-sm text-slate-500">dagen gemiddelde levertijd</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-5">
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
+                    <div class="flex items-center gap-x-4 mb-6">
+                        <div class="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center text-3xl">👋</div>
+                        <div>
+                            <div class="font-semibold">Noah van Leunen</div>
+                            <div class="text-slate-500 text-sm">Oprichter &amp; Webdesigner</div>
+                        </div>
+                    </div>
+                    <div class="text-sm text-slate-600">
+                        "Ik bouw websites die er niet alleen mooi uitzien, maar ook echt werken voor jouw bedrijf."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waarom RexRyze -->
+    <section class="bg-white py-16 border-y">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Waarom kiezen lokale bedrijven voor RexRyze?</h2>
+                <p class="mt-3 text-slate-600 max-w-md mx-auto">Omdat je een eerlijke prijs, persoonlijke service en een website krijgt die écht past bij jouw bedrijf.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 rounded-3xl p-8">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Snel &amp; betaalbaar</h3>
+                    <p class="text-slate-600">Vanaf €149 en binnen 7 dagen live. Geen verborgen kosten, geen verrassingen.</p>
+                </div>
+                <div class="bg-slate-50 rounded-3xl p-8">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-mobile-alt text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">100% mobielvriendelijk</h3>
+                    <p class="text-slate-600">Je website ziet er perfect uit op telefoon, tablet én desktop. Essentieel in 2026.</p>
+                </div>
+                <div class="bg-slate-50 rounded-3xl p-8">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-headset text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Persoonlijke service</h3>
+                    <p class="text-slate-600">Ik werk direct met jou samen. Geen tussenpersonen. Altijd bereikbaar via WhatsApp of mail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio teaser -->
+    <section class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+            <div>
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Recent werk</h2>
+                <p class="text-slate-600 mt-2">Demo-websites die laten zien wat ik kan bouwen</p>
+            </div>
+            <a href="portfolio.html" class="mt-4 md:mt-0 inline-flex items-center text-sm font-semibold text-sky-600 hover:text-sky-700">
+                Bekijk alle demo's <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Demo cards teaser -->
+            <a href="portfolio.html" class="group block">
+                <div class="demo-card bg-white rounded-3xl overflow-hidden border border-slate-200">
+                    <img src="https://picsum.photos/id/292/600/320" class="w-full h-44 object-cover group-hover:scale-105 transition-transform" alt="Restaurant demo">
+                    <div class="p-5">
+                        <div class="font-semibold">Restaurant De Gouden Lepel</div>
+                        <div class="text-sm text-slate-500">Restaurant • Reserveringssysteem</div>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio.html" class="group block">
+                <div class="demo-card bg-white rounded-3xl overflow-hidden border border-slate-200">
+                    <img src="https://picsum.photos/id/160/600/320" class="w-full h-44 object-cover group-hover:scale-105 transition-transform" alt="Garage demo">
+                    <div class="p-5">
+                        <div class="font-semibold">Van Dijk Auto Service</div>
+                        <div class="text-sm text-slate-500">Autogarage • Afspraak maken</div>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio.html" class="group block">
+                <div class="demo-card bg-white rounded-3xl overflow-hidden border border-slate-200">
+                    <img src="https://picsum.photos/id/1005/600/320" class="w-full h-44 object-cover group-hover:scale-105 transition-transform" alt="Kapper demo">
+                    <div class="p-5">
+                        <div class="font-semibold">Studio Snip</div>
+                        <div class="text-sm text-slate-500">Kapperszaak • Online boeken</div>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio.html" class="group block">
+                <div class="demo-card bg-white rounded-3xl overflow-hidden border border-slate-200">
+                    <img src="https://picsum.photos/id/251/600/320" class="w-full h-44 object-cover group-hover:scale-105 transition-transform" alt="Loodgieter demo">
+                    <div class="p-5">
+                        <div class="font-semibold">Pro Loodgieter</div>
+                        <div class="text-sm text-slate-500">Loodgietersbedrijf • 24/7 spoed</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center text-3xl font-semibold tracking-tight mb-12">Wat anderen zeggen</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-800 rounded-3xl p-7">
+                    <div class="flex gap-x-1 text-amber-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-300">"Noah heeft in 5 dagen een prachtige website voor mijn restaurant gemaakt. Mijn reserveringen zijn met 40% gestegen!"</p>
+                    <div class="mt-6 flex items-center gap-x-3">
+                        <div class="font-medium">Thomas Bakker</div>
+                        <div class="text-xs text-slate-400">• De Gouden Lepel</div>
+                    </div>
+                </div>
+                <div class="bg-slate-800 rounded-3xl p-7">
+                    <div class="flex gap-x-1 text-amber-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-slate-300">"Eindelijk een website waar klanten makkelijk een afspraak kunnen maken. Super professioneel en nog betaalbaar ook."</p>
+                    <div class="mt-6 flex items-center gap-x-3">
+                        <div class="font-medium">Lisa van der Meer</div>
+                        <div class="text-xs text-slate-400">• Studio Snip</div>
+                    </div>
+                </div>
+                <div class="bg-slate-800 rounded-3xl p-7">
+                    <div class="flex gap-x-1 text-amber-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-300">"De site van mijn garage ziet er modern uit en laadt supersnel. Klanten vinden ons nu veel makkelijker online."</p>
+                    <div class="mt-6 flex items-center gap-x-3">
+                        <div class="font-medium">Mark Jansen</div>
+                        <div class="text-xs text-slate-400">• Van Dijk Auto Service</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="max-w-7xl mx-auto px-6 py-16 md:py-20 text-center">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">Klaar om jouw bedrijf online te zetten?</h2>
+        <p class="mt-3 text-xl text-slate-600 max-w-md mx-auto">Vraag vandaag nog een vrijblijvend consult aan. Ik maak gratis een voorbeeld voor je.</p>
+        
+        <div class="mt-8">
+            <a href="contact.html" 
+               class="inline-flex items-center gap-x-3 px-10 py-4 bg-emerald-600 hover:bg-emerald-700 transition-colors text-white font-semibold text-lg rounded-3xl">
+                <span>Gratis consult aanvragen</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <p class="text-xs text-slate-500 mt-4">Geen verplichtingen. Ik reageer binnen 24 uur.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-y-6">
+                <div>
+                    <div class="flex items-center gap-x-3 mb-1">
+                        <div class="w-8 h-8 bg-slate-900 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-lg tracking-tighter">RR</span>
+                        </div>
+                        <span class="font-semibold text-xl">RexRyze</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Professionele websites voor lokale bedrijven</p>
+                </div>
+
+                <div class="text-sm text-slate-500">
+                    <div class="flex flex-wrap gap-x-6 gap-y-1">
+                        <a href="contact.html" class="hover:text-slate-700">Contact</a>
+                        <a href="prijzen.html" class="hover:text-slate-700">Prijzen</a>
+                        <a href="portfolio.html" class="hover:text-slate-700">Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="text-xs text-slate-400">
+                    © 2026 RexRyze • Noah van Leunen<br>
+                    <span class="text-[10px]">KVK-nummer: [In behandeling – definitief per 1 juli 2026]</span><br>
+                    <span class="text-[10px]">BTW-nummer: [Wordt toegevoegd na registratie]</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#0ea5e9');
+        }
+        
+        // Mobile menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+        }
+        
+        // Initialize
+        initializeTailwind();
+    </script>
+</body>
+</html>

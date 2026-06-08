@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijzen | RexRyze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        .nav-link { transition: all 0.2s ease; }
+        .nav-link:hover { color: #0ea5e9; }
+        
+        .pricing-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .pricing-card.popular {
+            border-color: #0ea5e9;
+            box-shadow: 0 10px 15px -3px rgb(14 165 233 / 0.1);
+        }
+        
+        .price {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl tracking-tighter">RR</span>
+                    </div>
+                    <a href="index.html" class="font-semibold text-2xl tracking-tighter text-slate-900">RexRyze</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-slate-700 hover:text-slate-900">Home</a>
+                    <a href="diensten.html" class="nav-link text-slate-700 hover:text-slate-900">Diensten</a>
+                    <a href="portfolio.html" class="nav-link text-slate-700 hover:text-slate-900">Portfolio</a>
+                    <a href="prijzen.html" class="nav-link text-slate-900 font-semibold">Prijzen</a>
+                    <a href="contact.html" class="nav-link text-slate-700 hover:text-slate-900">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <a href="contact.html" class="px-5 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-2xl transition-colors">
+                        Gratis consult aanvragen
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-700 hover:text-slate-900">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 flex flex-col gap-y-1 text-sm font-medium">
+                <a href="index.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Home</a>
+                <a href="diensten.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Diensten</a>
+                <a href="portfolio.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Portfolio</a>
+                <a href="prijzen.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700 font-semibold">Prijzen</a>
+                <a href="contact.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Contact</a>
+                <div class="pt-3 border-t mt-2">
+                    <a href="contact.html" class="block w-full text-center py-3 bg-slate-900 text-white font-semibold rounded-2xl">
+                        Gratis consult aanvragen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">Transparante prijzen</h1>
+                <p class="mt-3 text-xl text-slate-600">Geen verborgen kosten. Kies het pakket dat bij jouw bedrijf past. Alle prijzen zijn inclusief 1 jaar garantie.</p>
+                <div class="mt-2 text-sm text-emerald-600 flex items-center gap-x-2">
+                    <i class="fas fa-check"></i>
+                    <span>Prijzen bewust laag omdat ik net start — hoge kwaliteit, eerlijke prijs.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing cards -->
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-3 gap-6">
+            
+            <!-- Starter -->
+            <div class="pricing-card bg-white rounded-3xl border border-slate-200 p-8">
+                <div>
+                    <div class="uppercase tracking-widest text-xs font-semibold text-slate-500">STARTER</div>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-5xl font-semibold tracking-tighter price">€149</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-1">eenmalig (incl. 21% BTW)</p>
+                </div>
+                
+                <div class="my-6 h-px bg-slate-100"></div>
+                
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>1-3 pagina's</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Volledig mobielvriendelijk</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Contactformulier</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Google Maps integratie</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>7 dagen levering</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>1 maand gratis ondersteuning</span></li>
+                </ul>
+                
+                <a href="contact.html" class="mt-8 block w-full text-center py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-2xl transition-colors">
+                    Kies Starter
+                </a>
+                <p class="text-center text-[10px] text-slate-400 mt-3">Perfect voor zzp'ers en kleine winkels</p>
+            </div>
+
+            <!-- Professional - popular -->
+            <div class="pricing-card popular bg-white rounded-3xl border-2 border-sky-400 p-8 relative">
+                <div class="absolute -top-3 right-6 bg-sky-500 text-white text-xs font-semibold px-4 py-1 rounded-full">MEEST GEKOZEN</div>
+                
+                <div>
+                    <div class="uppercase tracking-widest text-xs font-semibold text-sky-600">PROFESSIONAL</div>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-5xl font-semibold tracking-tighter price">€299</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-1">eenmalig (incl. 21% BTW)</p>
+                </div>
+                
+                <div class="my-6 h-px bg-slate-100"></div>
+                
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>5-8 pagina's</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Volledig mobielvriendelijk</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Geavanceerd contactformulier</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>SEO basis + Google Maps</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Snelle laadtijden</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>1 maand gratis onderhoud</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Extra functionaliteit (bijv. foto galerij)</span></li>
+                </ul>
+                
+                <a href="contact.html" class="mt-8 block w-full text-center py-3.5 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-2xl transition-colors">
+                    Kies Professional
+                </a>
+                <p class="text-center text-[10px] text-slate-400 mt-3">Ideaal voor de meeste lokale bedrijven</p>
+            </div>
+
+            <!-- Premium -->
+            <div class="pricing-card bg-white rounded-3xl border border-slate-200 p-8">
+                <div>
+                    <div class="uppercase tracking-widest text-xs font-semibold text-slate-500">PREMIUM</div>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-5xl font-semibold tracking-tighter price">€499</span>
+                        <span class="ml-1 text-sm text-slate-500">+</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-1">eenmalig (incl. 21% BTW)</p>
+                </div>
+                
+                <div class="my-6 h-px bg-slate-100"></div>
+                
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>10+ pagina's of maatwerk</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Volledig op maat design</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Boekingssysteem of offerte tool</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Volledige SEO + Local SEO</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Hosting &amp; domein setup</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>3 maanden gratis onderhoud</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fas fa-check text-emerald-500 mt-0.5"></i> <span>Prioriteit support + 2 revisieronden</span></li>
+                </ul>
+                
+                <a href="contact.html" class="mt-8 block w-full text-center py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-2xl transition-colors">
+                    Kies Premium
+                </a>
+                <p class="text-center text-[10px] text-slate-400 mt-3">Voor bedrijven die écht willen opvallen</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recurring options + Calculator -->
+    <div class="max-w-7xl mx-auto px-6 pb-16">
+        <div class="bg-white rounded-3xl border border-slate-200 p-8 md:p-10">
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <!-- Recurring -->
+                <div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-4">Maandelijkse opties (terugkerende inkomsten)</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between items-center p-4 bg-slate-50 rounded-2xl">
+                            <div>
+                                <div class="font-medium">Maandelijks onderhoud</div>
+                                <div class="text-xs text-slate-500">Updates, backups, kleine aanpassingen</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-emerald-600">€12 /maand</div>
+                                <div class="text-[10px] text-slate-400">of €25 bij Premium</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-slate-50 rounded-2xl">
+                            <div>
+                                <div class="font-medium">Hosting + domeinbeheer</div>
+                                <div class="text-xs text-slate-500">Snel, veilig en altijd online</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-emerald-600">€5 - €8 /maand</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-xs text-slate-500">Met 50 klanten à €20/maand onderhoud = €1.000 stabiele maandelijkse omzet.</p>
+                </div>
+
+                <!-- Live Calculator -->
+                <div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-4">Bereken jouw prijs</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Kies pakket</label>
+                            <select id="package" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-sm">
+                                <option value="149">Starter — €149</option>
+                                <option value="299" selected>Professional — €299</option>
+                                <option value="499">Premium — €499</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-x-3 cursor-pointer">
+                                <input type="checkbox" id="extra-pages" class="w-4 h-4 accent-sky-600">
+                                <span class="text-sm">Extra pagina's (+ €49)</span>
+                            </label>
+                            <label class="flex items-center gap-x-3 cursor-pointer">
+                                <input type="checkbox" id="booking" class="w-4 h-4 accent-sky-600">
+                                <span class="text-sm">Boekingssysteem (+ €99)</span>
+                            </label>
+                            <label class="flex items-center gap-x-3 cursor-pointer">
+                                <input type="checkbox" id="maintenance" class="w-4 h-4 accent-emerald-600">
+                                <span class="text-sm">Eerste 3 maanden onderhoud gratis (na 3e maand €12/maand)</span>
+                            </label>
+                        </div>
+
+                        <div class="pt-4 border-t flex items-baseline justify-between">
+                            <div class="text-sm text-slate-500">Totaal eenmalig</div>
+                            <div class="text-4xl font-semibold tracking-tighter" id="total-price">€299</div>
+                        </div>
+                        <div class="text-xs text-emerald-600" id="recurring-note"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="max-w-7xl mx-auto px-6 pb-16 text-center">
+        <a href="contact.html" class="inline-flex items-center gap-x-3 px-10 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-lg rounded-3xl transition-colors">
+            Vraag een vrijblijvende offerte aan
+            <i class="fas fa-arrow-right"></i>
+        </a>
+        <p class="mt-3 text-xs text-slate-500">50% vooraf • 50% bij oplevering • Factuur met KVK-nummer</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-y-6">
+                <div>
+                    <div class="flex items-center gap-x-3 mb-1">
+                        <div class="w-8 h-8 bg-slate-900 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-lg tracking-tighter">RR</span>
+                        </div>
+                        <span class="font-semibold text-xl">RexRyze</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Professionele websites voor lokale bedrijven</p>
+                </div>
+
+                <div class="text-sm text-slate-500">
+                    <div class="flex flex-wrap gap-x-6 gap-y-1">
+                        <a href="contact.html" class="hover:text-slate-700">Contact</a>
+                        <a href="prijzen.html" class="hover:text-slate-700">Prijzen</a>
+                        <a href="portfolio.html" class="hover:text-slate-700">Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="text-xs text-slate-400">
+                    © 2026 RexRyze • Noah van Leunen<br>
+                    <span class="text-[10px]">KVK-nummer: [In behandeling – definitief per 1 juli 2026]</span><br>
+                    <span class="text-[10px]">BTW-nummer: [Wordt toegevoegd na registratie]</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+        }
+
+        // Price calculator
+        function updatePrice() {
+            const base = parseInt(document.getElementById('package').value);
+            let total = base;
+            
+            if (document.getElementById('extra-pages').checked) total += 49;
+            if (document.getElementById('booking').checked) total += 99;
+            
+            document.getElementById('total-price').textContent = '€' + total;
+            
+            const note = document.getElementById('recurring-note');
+            if (document.getElementById('maintenance').checked) {
+                note.innerHTML = 'Na 3 maanden: + €12/maand onderhoud';
+            } else {
+                note.innerHTML = '';
+            }
+        }
+        
+        // Attach listeners
+        document.getElementById('package').addEventListener('change', updatePrice);
+        document.getElementById('extra-pages').addEventListener('change', updatePrice);
+        document.getElementById('booking').addEventListener('change', updatePrice);
+        document.getElementById('maintenance').addEventListener('change', updatePrice);
+        
+        // Initial calculation
+        updatePrice();
+    </script>
+</body>
+</html>
