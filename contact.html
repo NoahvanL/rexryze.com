@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact &amp; Afspraak maken | RexRyze</title>
+    <title>Contact | RexRyze - Asten</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -12,33 +12,17 @@
         .nav-link { transition: all 0.2s ease; }
         .nav-link:hover { color: #0ea5e9; }
         
-        .contact-card {
+        .contact-option {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .contact-card:hover {
-            transform: translateY(-4px);
+        .contact-option:hover {
+            transform: translateY(-6px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
         
-        .form-input {
-            transition: all 0.2s ease;
-        }
-        
-        .form-input:focus {
-            outline: none;
-            border-color: #0ea5e9;
-            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
-        }
-        
-        .whatsapp-btn {
+        .whatsapp-gradient {
             background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .whatsapp-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgb(37 211 102 / 0.3);
         }
     </style>
 </head>
@@ -63,14 +47,15 @@
                 </div>
 
                 <div class="hidden md:flex items-center gap-x-3">
-                    <a href="https://wa.me/31682377334?text=Hoi%20Noah%2C%20ik%20wil%20graag%20een%20gratis%20consult%20inplannen%20voor%20een%20nieuwe%20website." 
+                    <a href="https://wa.me/31682377334?text=Hoi%20Noah%2C%20ik%20wil%20graag%20een%20gratis%20consult%20inplannen." 
                        target="_blank"
-                       class="px-4 py-2 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl flex items-center gap-x-2 transition-colors">
+                       class="px-4 py-2 text-sm font-semibold flex items-center gap-x-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl transition-colors">
                         <i class="fab fa-whatsapp"></i>
                         <span>WhatsApp</span>
                     </a>
-                    <a href="contact.html" class="px-5 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-2xl transition-colors">
-                        Plan consult
+                    <a href="contact.html" 
+                       class="px-5 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-2xl transition-colors">
+                        Neem contact op
                     </a>
                 </div>
 
@@ -88,12 +73,12 @@
                 <a href="prijzen.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700">Prijzen</a>
                 <a href="contact.html" class="py-2.5 px-4 hover:bg-slate-100 rounded-xl text-slate-700 font-semibold">Contact</a>
                 
-                <div class="pt-4 border-t mt-2 space-y-3">
+                <div class="pt-4 border-t mt-2">
                     <a href="https://wa.me/31682377334?text=Hoi%20Noah%2C%20ik%20wil%20graag%20een%20gratis%20consult%20inplannen." 
                        target="_blank"
                        class="flex items-center justify-center gap-x-2 w-full py-3 bg-emerald-600 text-white font-semibold rounded-2xl">
                         <i class="fab fa-whatsapp"></i>
-                        <span>Chat via WhatsApp</span>
+                        <span>Direct via WhatsApp</span>
                     </a>
                 </div>
             </div>
@@ -102,182 +87,118 @@
 
     <!-- Header -->
     <div class="bg-white border-b">
-        <div class="max-w-7xl mx-auto px-6 py-14">
-            <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-x-2 bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-3xl text-sm font-medium mb-4">
-                    <i class="fas fa-clock"></i>
-                    <span>Reactie binnen 2 uur op werkdagen</span>
+        <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter text-slate-900 leading-tight">
+                    Laten we direct<br>contact opnemen.
+                </h1>
+                <p class="mt-5 text-xl text-slate-600 max-w-lg">
+                    Geen formulieren. Geen gedoe. Kies gewoon hoe je het makkelijkst met me in contact komt.
+                </p>
+                <div class="mt-4 flex items-center gap-x-2 text-sm text-emerald-600">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Ik reageer meestal binnen 1-2 uur op werkdagen</span>
                 </div>
-                <h1 class="text-5xl font-semibold tracking-tighter text-slate-900">Laten we samen aan de slag gaan</h1>
-                <p class="mt-4 text-xl text-slate-600">Kies hoe je het makkelijkst contact met me opneemt. Ik help je graag met een vrijblijvend advies of een gratis demo van jouw website.</p>
             </div>
         </div>
     </div>
 
-    <!-- Direct contact opties -->
+    <!-- Contact opties -->
     <div class="max-w-7xl mx-auto px-6 py-12">
-        <h2 class="text-2xl font-semibold tracking-tight text-slate-900 mb-6">Kies je voorkeursmethode</h2>
-        
         <div class="grid md:grid-cols-3 gap-6">
             
-            <!-- WhatsApp -->
+            <!-- WhatsApp - Grootste en meest prominent -->
             <a href="https://wa.me/31682377334?text=Hoi%20Noah%2C%20ik%20ben%20ge%C3%AFnteresseerd%20in%20een%20nieuwe%20website%20voor%20mijn%20bedrijf.%20Kunnen%20we%20een%20gratis%20consult%20inplannen%3F" 
                target="_blank"
-               class="contact-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-emerald-200">
-                <div class="flex items-center gap-x-4 mb-5">
-                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
+               class="contact-option group block bg-white border-2 border-emerald-500 rounded-3xl p-8 hover:border-emerald-600">
+                <div class="flex items-start justify-between">
                     <div>
-                        <div class="font-semibold text-xl">WhatsApp</div>
-                        <div class="text-emerald-600 font-medium">Snelste reactie</div>
+                        <div class="w-14 h-14 whatsapp-gradient rounded-2xl flex items-center justify-center text-white text-4xl mb-5">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="font-semibold text-2xl text-slate-900">WhatsApp</div>
+                        <div class="text-emerald-600 font-medium mt-1">Snelste manier</div>
+                    </div>
+                    <div class="text-emerald-500 group-hover:translate-x-1 transition-transform">
+                        <i class="fas fa-arrow-right text-2xl"></i>
                     </div>
                 </div>
-                <div class="text-slate-600 mb-6">Chat direct met me. Stuur een bericht en we plannen een gratis 15-minuten consult in.</div>
-                <div class="inline-flex items-center gap-x-2 text-emerald-700 font-semibold group-hover:gap-x-3 transition-all">
-                    <span>Open WhatsApp</span>
-                    <i class="fas fa-arrow-right"></i>
+                <div class="mt-6 text-slate-600">
+                    Stuur me direct een bericht. Ik plan vaak dezelfde dag nog een gratis videocall in.
                 </div>
-                <div class="mt-4 text-xs text-slate-500">+31 6 8237 7334</div>
+                <div class="mt-6 font-semibold text-emerald-700 flex items-center gap-x-2">
+                    <span>Chat nu via WhatsApp</span>
+                </div>
+                <div class="mt-1 text-sm text-slate-500">+31 6 8237 7334</div>
             </a>
 
             <!-- Bellen -->
             <a href="tel:+31682377334" 
-               class="contact-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-blue-200">
-                <div class="flex items-center gap-x-4 mb-5">
-                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl">
-                        <i class="fas fa-phone"></i>
-                    </div>
+               class="contact-option group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-blue-300">
+                <div class="flex items-start justify-between">
                     <div>
-                        <div class="font-semibold text-xl">Bellen</div>
-                        <div class="text-blue-600 font-medium">Direct spreken</div>
+                        <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-4xl mb-5">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="font-semibold text-2xl text-slate-900">Bellen</div>
+                        <div class="text-blue-600 font-medium mt-1">Direct spreken</div>
+                    </div>
+                    <div class="text-blue-500 group-hover:translate-x-1 transition-transform">
+                        <i class="fas fa-arrow-right text-2xl"></i>
                     </div>
                 </div>
-                <div class="text-slate-600 mb-6">Bel me voor een snel gesprek. Ik ben bereikbaar op werkdagen tussen 09:00 en 18:00.</div>
-                <div class="inline-flex items-center gap-x-2 text-blue-700 font-semibold group-hover:gap-x-3 transition-all">
-                    <span>Bel 06 8237 7334</span>
-                    <i class="fas fa-arrow-right"></i>
+                <div class="mt-6 text-slate-600">
+                    Bel me voor een kort en persoonlijk gesprek. Ik ben bereikbaar op werkdagen tussen 9:00 en 18:00.
                 </div>
-                <div class="mt-4 text-xs text-slate-500">+31 6 8237 7334</div>
+                <div class="mt-6 font-semibold text-blue-700 flex items-center gap-x-2">
+                    <span>Bel 06 8237 7334</span>
+                </div>
             </a>
 
             <!-- E-mail -->
-            <a href="mailto:rexryze.com@gmail.com?subject=Vraag%20over%20een%20nieuwe%20website%20-%20RexRyze" 
-               class="contact-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-violet-200">
-                <div class="flex items-center gap-x-4 mb-5">
-                    <div class="w-14 h-14 bg-violet-100 text-violet-600 rounded-2xl flex items-center justify-center text-3xl">
-                        <i class="fas fa-envelope"></i>
-                    </div>
+            <a href="mailto:rexryze.com@gmail.com?subject=Vraag%20over%20een%20website%20-%20RexRyze" 
+               class="contact-option group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-violet-300">
+                <div class="flex items-start justify-between">
                     <div>
-                        <div class="font-semibold text-xl">E-mail</div>
-                        <div class="text-violet-600 font-medium">Uitgebreide vragen</div>
+                        <div class="w-14 h-14 bg-violet-100 text-violet-600 rounded-2xl flex items-center justify-center text-4xl mb-5">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="font-semibold text-2xl text-slate-900">E-mail</div>
+                        <div class="text-violet-600 font-medium mt-1">Voor uitgebreide vragen</div>
+                    </div>
+                    <div class="text-violet-500 group-hover:translate-x-1 transition-transform">
+                        <i class="fas fa-arrow-right text-2xl"></i>
                     </div>
                 </div>
-                <div class="text-slate-600 mb-6">Stuur een mail met je wensen. Ik reageer binnen 2 uur op werkdagen met een persoonlijk antwoord.</div>
-                <div class="inline-flex items-center gap-x-2 text-violet-700 font-semibold group-hover:gap-x-3 transition-all">
+                <div class="mt-6 text-slate-600">
+                    Stuur een mail met je wensen of vragen. Ik reageer binnen 2 uur op werkdagen.
+                </div>
+                <div class="mt-6 font-semibold text-violet-700 flex items-center gap-x-2">
                     <span>Mail naar rexryze.com@gmail.com</span>
-                    <i class="fas fa-arrow-right"></i>
                 </div>
             </a>
-        </div>
-    </div>
-
-    <!-- Formulier -->
-    <div class="max-w-7xl mx-auto px-6 pb-16">
-        <div class="bg-white rounded-3xl border border-slate-200 p-8 md:p-12 shadow-sm">
-            <div class="max-w-2xl mx-auto">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Of vul het formulier in</h2>
-                    <p class="mt-2 text-slate-600">Ik neem binnen 2 uur contact met je op om een gratis consult in te plannen.</p>
-                </div>
-
-                <!-- Web3Forms - Echt werkend formulier -->
-                <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="space-y-6">
-                    
-                    <!-- Web3Forms Access Key - VERVANG DIT DOOR JE EIGEN KEY -->
-                    <!-- Ga naar https://web3forms.com en maak gratis een key aan (duurt 30 seconden) -->
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                    <input type="hidden" name="subject" value="Nieuwe aanvraag via rexryze.com">
-                    <input type="hidden" name="from_name" value="RexRyze Website">
-                    <input type="hidden" name="redirect" value="https://rexryze.com/contact.html?success=true">
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Je naam *</label>
-                            <input type="text" name="naam" required 
-                                   class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3.5 text-sm" 
-                                   placeholder="Volledige naam">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Bedrijfsnaam</label>
-                            <input type="text" name="bedrijf" 
-                                   class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3.5 text-sm" 
-                                   placeholder="Naam van je bedrijf">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1.5">E-mailadres *</label>
-                            <input type="email" name="email" required 
-                                   class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3.5 text-sm" 
-                                   placeholder="jouw@email.nl">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Telefoonnummer *</label>
-                            <input type="tel" name="telefoon" required 
-                                   class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3.5 text-sm" 
-                                   placeholder="06 12 34 56 78">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Welk pakket past het beste bij je?</label>
-                        <select name="pakket" class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3.5 text-sm">
-                            <option value="">Nog niet zeker / Vrijblijvend advies</option>
-                            <option value="Starter (€149)">Starter (€149)</option>
-                            <option value="Professional (€299)">Professional (€299) - Meest gekozen</option>
-                            <option value="Premium (€499)">Premium (€499)</option>
-                            <option value="Alleen onderhoud">Alleen maandelijks onderhoud</option>
-                            <option value="Maatwerk">Maatwerk / speciaal verzoek</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Vertel me over je bedrijf en wat je zoekt *</label>
-                        <textarea name="bericht" required rows="5" 
-                                  class="form-input w-full border border-slate-300 rounded-3xl px-4 py-4 text-sm resize-y" 
-                                  placeholder="Bijvoorbeeld: Ik heb een kapsalon en wil een website met online boekingssysteem. Momenteel heb ik alleen een Facebook-pagina..."></textarea>
-                    </div>
-
-                    <div class="pt-2">
-                        <button type="submit" 
-                                class="w-full py-4 bg-slate-900 hover:bg-slate-800 transition-colors text-white font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3">
-                            <span>Verstuur aanvraag</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                        <p class="text-center text-xs text-slate-500 mt-3">Je gegevens worden alleen gebruikt om contact met je op te nemen.</p>
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
 
     <!-- Extra info -->
-    <div class="max-w-7xl mx-auto px-6 pb-16">
-        <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-10">
+    <div class="max-w-7xl mx-auto px-6 pb-12">
+        <div class="bg-white border border-slate-200 rounded-3xl p-8 md:p-10">
             <div class="flex flex-col md:flex-row md:items-center gap-8">
                 <div class="flex-1">
-                    <h3 class="font-semibold text-2xl tracking-tight">Geen zin om te wachten?</h3>
-                    <p class="mt-2 text-slate-300">Stuur direct een WhatsApp-bericht. Ik plan vaak dezelfde dag nog een kort videocall in.</p>
+                    <h3 class="font-semibold text-2xl tracking-tight">Wat kun je verwachten?</h3>
+                    <ul class="mt-4 space-y-2 text-slate-600">
+                        <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-500"></i> Gratis 15-minuten consult</li>
+                        <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-500"></i> Persoonlijk advies op maat</li>
+                        <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-500"></i> Geen verplichtingen</li>
+                        <li class="flex items-center gap-x-3"><i class="fas fa-check text-emerald-500"></i> Ik maak eventueel een gratis demo</li>
+                    </ul>
                 </div>
-                <div>
-                    <a href="https://wa.me/31682377334?text=Hoi%20Noah%2C%20ik%20wil%20graag%20een%20gratis%20consult%20inplannen." 
-                       target="_blank"
-                       class="whatsapp-btn inline-flex items-center justify-center gap-x-3 px-8 py-4 text-white font-semibold text-lg rounded-3xl w-full md:w-auto">
-                        <i class="fab fa-whatsapp text-2xl"></i>
-                        <span>Direct chatten via WhatsApp</span>
-                    </a>
+                <div class="md:w-72">
+                    <div class="text-sm text-slate-500 mb-2">Gelegen in</div>
+                    <div class="font-semibold text-xl">Asten, Noord-Brabant</div>
+                    <div class="mt-4 text-sm text-slate-500">
+                        Ik werk landelijk, maar ben gevestigd in de regio Asten / Helmond / Eindhoven.
+                    </div>
                 </div>
             </div>
         </div>
@@ -305,7 +226,7 @@
                     </div>
                 </div>
 
-                    <div class="text-xs text-slate-400">
+                <div class="text-xs text-slate-400">
                     © 2026 RexRyze • Noah van Leunen<br>
                     <span class="text-[10px]">Asten, Noord-Brabant &nbsp;|&nbsp; 06 8237 7334 &nbsp;|&nbsp; rexryze.com@gmail.com</span><br>
                     <span class="text-[10px]">KVK-nummer: [In behandeling – definitief per 1 juli 2026]</span>
@@ -314,20 +235,13 @@
         </div>
     </footer>
 
-    <!-- Success message (als form is verzonden via redirect) -->
-    <div id="success-message" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-[100]">
-        <div class="bg-white rounded-3xl max-w-md mx-4 p-8 text-center">
-            <div class="mx-auto w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-5">
-                <i class="fas fa-check text-emerald-600 text-3xl"></i>
-            </div>
-            <h3 class="font-semibold text-2xl">Bedankt voor je bericht!</h3>
-            <p class="mt-2 text-slate-600">Ik neem binnen 2 uur contact met je op via WhatsApp of e-mail om een gratis consult in te plannen.</p>
-            <button onclick="closeSuccess()" 
-                    class="mt-6 px-8 py-3 bg-slate-900 text-white font-semibold rounded-2xl w-full">
-                Terug naar de website
-            </button>
-        </div>
-    </div>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/31682377334?text=Hoi%20Noah%2C%20ik%20wil%20graag%20een%20gratis%20consult%20inplannen." 
+       target="_blank"
+       class="fixed bottom-6 right-6 z-50 flex items-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3.5 rounded-3xl shadow-xl font-semibold text-sm">
+        <i class="fab fa-whatsapp text-xl"></i>
+        <span class="hidden sm:inline">Chat via WhatsApp</span>
+    </a>
 
     <script>
         // Mobile menu
@@ -344,47 +258,6 @@
                 }
             });
         }
-
-        // Form handling with Web3Forms
-        const form = document.getElementById('contact-form');
-        const successModal = document.getElementById('success-message');
-
-        form.addEventListener('submit', function(e) {
-            const button = form.querySelector('button[type="submit"]');
-            const originalText = button.innerHTML;
-            
-            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Versturen...';
-            button.disabled = true;
-        });
-
-        // Check for success parameter in URL (for Web3Forms redirect)
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('success') === 'true') {
-            successModal.classList.remove('hidden');
-            successModal.classList.add('flex');
-            
-            // Remove the ?success=true from URL
-            window.history.replaceState({}, document.title, window.location.pathname);
-        }
-
-        function closeSuccess() {
-            successModal.classList.remove('flex');
-            successModal.classList.add('hidden');
-        }
-
-        // Optional: Show alert if user didn't replace the access_key
-        const accessKey = document.querySelector('input[name="access_key"]');
-        if (accessKey && accessKey.value === 'YOUR_ACCESS_KEY_HERE') {
-            console.warn('%c[REXRYZE] Belangrijk: Vervang YOUR_ACCESS_KEY_HERE door je eigen Web3Forms key in contact.html', 'color: orange');
-        }
     </script>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/31682377334?text=Hoi%20Noah%2C%20ik%20wil%20graag%20een%20gratis%20consult%20inplannen." 
-       target="_blank"
-       class="fixed bottom-6 right-6 z-50 flex items-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3.5 rounded-3xl shadow-xl font-semibold text-sm">
-        <i class="fab fa-whatsapp text-xl"></i>
-        <span class="hidden sm:inline">Chat via WhatsApp</span>
-    </a>
 </body>
 </html>
